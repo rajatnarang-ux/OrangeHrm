@@ -13,6 +13,9 @@ public class BaseTest {
     protected BrowserContext context;
     protected Page page;
 
+    // ✅ Project Root Path
+    protected String ROOT = System.getProperty("user.dir");
+
     @BeforeMethod
     public void setup() {
 
@@ -22,13 +25,13 @@ public class BaseTest {
 
         browser = playwright.chromium().launch(
                 new BrowserType.LaunchOptions()
-                        .setHeadless(false)   // UI visible (local run)
+                        .setHeadless(false)
                         .setSlowMo(50)
         );
 
         context = browser.newContext();
 
-        // 🔥 START TRACE (PROOF)
+        // 🔥 Start Trace Recording
         context.tracing().start(new Tracing.StartOptions()
                 .setScreenshots(true)
                 .setSnapshots(true)
@@ -47,16 +50,17 @@ public class BaseTest {
     public void tearDown() {
 
         try {
-            // 🔥 STOP TRACE (PROOF FILE)
-            context.tracing().stop(new Tracing.StopOptions()
-                    .setPath(Paths.get("target/trace.zip")));
 
-            // 🔥 Screenshot final proof
+            // 🔥 TRACE FILE in PROJECT ROOT
+            context.tracing().stop(new Tracing.StopOptions()
+                    .setPath(Paths.get(ROOT + "/trace.zip")));
+
+            // 🔥 FINAL SCREENSHOT in PROJECT ROOT
             page.screenshot(new Page.ScreenshotOptions()
-                    .setPath(Paths.get("target/final-screen.png"))
+                    .setPath(Paths.get(ROOT + "/final-screen.png"))
                     .setFullPage(true));
 
-            System.out.println("Proof files generated: trace.zip + screenshot");
+            System.out.println("Proof files generated in PROJECT ROOT");
 
         } catch (Exception e) {
             System.out.println("Error in proof generation: " + e.getMessage());
