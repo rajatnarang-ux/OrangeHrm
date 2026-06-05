@@ -13,8 +13,8 @@ public class BaseTest {
     protected BrowserContext context;
     protected Page page;
 
-    // ✅ Project Root Path
-    protected String ROOT = System.getProperty("user.dir");
+    // ✅ FINAL OUTPUT FOLDER
+    protected String ROOT = "C:/Users/HP/Downloads/HRM/HRM/output";
 
     @BeforeMethod
     public void setup() {
@@ -31,7 +31,7 @@ public class BaseTest {
 
         context = browser.newContext();
 
-        // 🔥 Start Trace Recording
+        // 🔥 TRACE START
         context.tracing().start(new Tracing.StartOptions()
                 .setScreenshots(true)
                 .setSnapshots(true)
@@ -50,24 +50,24 @@ public class BaseTest {
     public void tearDown() {
 
         try {
-
-            // 🔥 TRACE FILE in PROJECT ROOT
+            // 🔥 TRACE FILE
             context.tracing().stop(new Tracing.StopOptions()
                     .setPath(Paths.get(ROOT + "/trace.zip")));
 
-            // 🔥 FINAL SCREENSHOT in PROJECT ROOT
+            // 📸 FINAL SCREENSHOT
             page.screenshot(new Page.ScreenshotOptions()
                     .setPath(Paths.get(ROOT + "/final-screen.png"))
                     .setFullPage(true));
 
-            System.out.println("Proof files generated in PROJECT ROOT");
+            context.close();
+            browser.close();
+            playwright.close();
+
+            System.out.println("✅ Proof saved in: " + ROOT);
 
         } catch (Exception e) {
-            System.out.println("Error in proof generation: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
-
-        browser.close();
-        playwright.close();
 
         System.out.println("========== TEST FINISHED ==========");
     }
