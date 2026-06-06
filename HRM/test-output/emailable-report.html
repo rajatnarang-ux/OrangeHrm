@@ -8,93 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">26,725</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">38,672</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">setup</a></td><td rowspan="1">1780685888373</td><td rowspan="1">26588</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m1">tearDown</a></td><td rowspan="1">1780685915030</td><td rowspan="1">-1780685915030</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m2">loginTest</a></td><td rowspan="1">1780685915008</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">loginTest</a></td><td rowspan="1">1780691643512</td><td rowspan="1">2191</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">tests.LoginTest#setup</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.PlaywrightException: Error {
-  message=&apos;net::ERR_ABORTED; maybe frame was detached?
-  name=&apos;Error
-  stack=&apos;Error: net::ERR_ABORTED; maybe frame was detached?
-    at FrameManager.frameAbortedNavigation (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\frames.js:205:14)
-    at FrameManager.requestFailed (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\frames.js:255:12)
-    at CRNetworkManager._onLoadingFailed (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\chromium\crNetworkManager.js:461:55)
-    at CRSession.emit (node:events:518:28)
-    at C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\chromium\crConnection.js:138:14
-}
-Call log:
--   - navigating to &quot;https://opensource-demo.orangehrmlive.com/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
-	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:419)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:918)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
-	at com.microsoft.playwright.Page.navigate(Page.java:5491)
-	at base.BaseTest.setup(BaseTest.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: com.microsoft.playwright.impl.DriverException: Error {
-  message=&apos;net::ERR_ABORTED; maybe frame was detached?
-  name=&apos;Error
-  stack=&apos;Error: net::ERR_ABORTED; maybe frame was detached?
-    at FrameManager.frameAbortedNavigation (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\frames.js:205:14)
-    at FrameManager.requestFailed (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\frames.js:255:12)
-    at CRNetworkManager._onLoadingFailed (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\chromium\crNetworkManager.js:461:55)
-    at CRSession.emit (node:events:518:28)
-    at C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\chromium\crConnection.js:138:14
-}
-Call log:
--   - navigating to &quot;https://opensource-demo.orangehrmlive.com/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
-	... 39 more
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.LoginTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.LoginTest#loginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.PlaywrightException: Error {
-  message=&apos;net::ERR_ABORTED; maybe frame was detached?
-  name=&apos;Error
-  stack=&apos;Error: net::ERR_ABORTED; maybe frame was detached?
-    at FrameManager.frameAbortedNavigation (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\frames.js:205:14)
-    at FrameManager.requestFailed (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\frames.js:255:12)
-    at CRNetworkManager._onLoadingFailed (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\chromium\crNetworkManager.js:461:55)
-    at CRSession.emit (node:events:518:28)
-    at C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\chromium\crConnection.js:138:14
-}
-Call log:
--   - navigating to &quot;https://opensource-demo.orangehrmlive.com/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
-	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:419)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:918)
-	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
-	at com.microsoft.playwright.Page.navigate(Page.java:5491)
-	at base.BaseTest.setup(BaseTest.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: com.microsoft.playwright.impl.DriverException: Error {
-  message=&apos;net::ERR_ABORTED; maybe frame was detached?
-  name=&apos;Error
-  stack=&apos;Error: net::ERR_ABORTED; maybe frame was detached?
-    at FrameManager.frameAbortedNavigation (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\frames.js:205:14)
-    at FrameManager.requestFailed (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\frames.js:255:12)
-    at CRNetworkManager._onLoadingFailed (C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\chromium\crNetworkManager.js:461:55)
-    at CRSession.emit (node:events:518:28)
-    at C:\Users\HP\AppData\Local\Temp\playwright-java-17315212500974316330\package\lib\server\chromium\crConnection.js:138:14
-}
-Call log:
--   - navigating to &quot;https://opensource-demo.orangehrmlive.com/&quot;, waiting until &quot;load&quot;
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
-	... 39 more
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">tests.LoginTest#loginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -1,11 +1,10 @@
 package tests;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
 
 import base.BaseTest;
+import org.testng.annotations.Test;
 import pages.LoginPage;
+
+import java.nio.file.Paths;
 
 public class LoginTest extends BaseTest {
 
@@ -16,7 +15,11 @@ public class LoginTest extends BaseTest {
 
         loginPage.login("Admin", "admin123");
 
-        // optional verify
-        System.out.println("Title after login: " + page.title());
+        System.out.println("Login Success");
+
+        // 📸 LOGIN SCREENSHOT
+        page.screenshot(new com.microsoft.playwright.Page.ScreenshotOptions()
+                .setPath(Paths.get(ROOT + "/login-success.png"))
+                .setFullPage(true));
     }
 }
